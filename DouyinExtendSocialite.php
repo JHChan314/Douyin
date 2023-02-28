@@ -1,10 +1,10 @@
 <?php
 
-namespace SocialiteProviders\TikTok;
+namespace SocialiteProviders\Douyin;
 
 use SocialiteProviders\Manager\SocialiteWasCalled;
 
-class TikTokExtendSocialite
+class DouyinExtendSocialite
 {
     /**
      * Register the provider.
@@ -13,6 +13,6 @@ class TikTokExtendSocialite
      */
     public function handle(SocialiteWasCalled $socialiteWasCalled)
     {
-        $socialiteWasCalled->extendSocialite('tiktok', Provider::class);
+        $socialiteWasCalled->extendSocialite('douyin', Provider::class);
     }
 }

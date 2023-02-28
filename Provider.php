@@ -1,6 +1,6 @@
 <?php
 
-namespace SocialiteProviders\TikTok;
+namespace SocialiteProviders\Douyin;
 
 use Illuminate\Support\Arr;
 use Laravel\Socialite\Two\InvalidStateException;
@@ -9,7 +9,7 @@ use SocialiteProviders\Manager\OAuth2\User;
 
 class Provider extends AbstractProvider
 {
-    public const IDENTIFIER = 'TIKTOK';
+    public const IDENTIFIER = 'DOUYIN';
 
     /**
      * {@inheritdoc}
@@ -28,7 +28,7 @@ class Provider extends AbstractProvider
      */
     protected function getAuthUrl($state)
     {
-        return 'https://open-api.tiktok.com/platform/oauth/connect?'.http_build_query([
+        return 'https://open.douyin.com/platform/oauth/connect?'.http_build_query([
             'client_key'    => $this->clientId,
             'state'         => $state,
             'response_type' => 'code',
@@ -72,7 +72,7 @@ class Provider extends AbstractProvider
      */
     public function getTokenUrl()
     {
-        return 'https://open-api.tiktok.com/oauth/access_token/';
+        return 'https://open.douyin.com/oauth/access_token/';
     }
 
     /**
@@ -89,7 +89,7 @@ class Provider extends AbstractProvider
     }
 
     /**
-     * Get TikTok user by token.
+     * Get Douyin user by token.
      *
      * @param array $data
      *
@@ -97,12 +97,12 @@ class Provider extends AbstractProvider
      */
     protected function getUserByToken($data)
     {
-        // Note: The TikTok api does not have an endpoint to get a user by the access
+        // Note: The Douyin api does not have an endpoint to get a user by the access
         // token only. Open id is also required therefore:
         // $data['access_token'] = $token, $data['open_id'] = $open_id
 
         $response = $this->getHttpClient()->get(
-            'https://open-api.tiktok.com/oauth/userinfo?'.http_build_query($data)
+            'https://open.douyin.com/oauth/userinfo?'.http_build_query($data)
         );
 
         return json_decode((string) $response->getBody(), true);

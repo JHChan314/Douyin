@@ -1,6 +1,6 @@
 {
-    "name": "socialiteproviders/tiktok",
-    "description": "TikTok (tiktok.com) OAuth2 Provider for Laravel Socialite",
+    "name": "socialiteproviders/douyin",
+    "description": "Douyin (douyin.com) OAuth2 Provider for Laravel Socialite",
     "license": "MIT",
     "keywords": [
         "laravel",
