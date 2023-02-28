@@ -1,7 +1,7 @@
 # TikTok
 
 ```bash
-composer require socialiteproviders/tiktok
+composer require socialiteproviders/douyin
 ```
 
 ## Installation & Basic Usage
