@@ -1,6 +1,6 @@
 <?php
 
-namespace SocialiteProviders\Douyin;
+namespace Jhchan314\Douyin;
 
 use Illuminate\Support\Arr;
 use Laravel\Socialite\Two\InvalidStateException;
