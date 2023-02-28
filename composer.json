@@ -1,5 +1,5 @@
 {
-    "name": "socialiteproviders/douyin",
+    "name": "jhchan314/douyin",
     "description": "Douyin (douyin.com) OAuth2 Provider for Laravel Socialite",
     "license": "MIT",
     "keywords": [
