@@ -7,19 +7,15 @@
         "oauth",
         "provider",
         "socialite",
-        "tiktok"
+        "douyin"
     ],
     "authors": [
         {
-            "name": "Thomas Banks",
-            "email": "thomas@tombanks.me"
+            "name": "Jhchan",
+            "email": "jhchan314@gmail.com"
         }
     ],
-    "support": {
-        "issues": "https://github.com/socialiteproviders/providers/issues",
-        "source": "https://github.com/socialiteproviders/providers",
-        "docs": "https://socialiteproviders.com/tiktok"
-    },
+   
     "require": {
         "php": "^7.4 || ^8.0",
         "socialiteproviders/manager": "~4.0"
